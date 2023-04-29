@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bill Spill</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>BILL <br> SPILL</h1>
+    <div class="content-container">
+      <div class="app-container">
+        <div class="app-left-container">
+          <label style="color: #9C60FF;">Bill</label><br />
+          <input type="text" name="" id="bill-input" placeholder="₹ 0" oninput="calculateBill()"/> <br />
+          Select Tip % <br/>
+          <button class="button" id="button-1" onclick="calculateBill(5)">5%</button>
+          <button class="button" id="button-2" onclick="calculateBill(10)">10%</button>
+          <button class="button" id="button-3" onclick="calculateBill(15)">15%</button><br />
+          <button class="button" id="button-4" onclick="calculateBill(25)">25%</button>
+          <button class="button" id="button-5" onclick="calculateBill(50)">50%</button>
+          <button class="button" id="button-6" onclick="calculateBill(75)">75%</button><br />
+          <label for="total-people-input" >Number of People</label><br />
+          <input
+            type="number"
+            name="total-people-input"
+            id="total-people-input"
+            placeholder="1"
+            oninput="calculateBill()"
+          />
+        </div>
+        <div class="app-right-container">
+          <div class="right-tip-div">
+            <div id="right-tip-div-text">
+              Tip Amount <br />
+              <span id="right-tip-div-text-span">/person</span>
+            </div>
+            <div id="right-tip-div-value">₹0.00</div>
+          </div>
+          <div class="right-total-div">
+            <div id="right-tip-div-text">
+              Total <br />
+              <span id="right-tip-div-total-span">/person</span>
+            </div>
+            <div id="right-total-div-value">₹0.00</div>
+          </div>
+          <button id="reset" onclick="reset()">RESET</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
